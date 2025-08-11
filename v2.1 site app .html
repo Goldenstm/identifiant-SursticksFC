@@ -1,7 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
+        
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Football Stickers - Carte Interactive</title>
@@ -765,13 +766,11 @@
                     return;
                 }
 
-                // Connexion réussie - Redirection vers le fichier v2.1.2
+                // Connexion réussie
                 localStorage.setItem('footballStickersCurrentUser', username);
                 this.currentUser = username;
                 errorDiv.classList.add('hidden');
-                
-                // Redirection vers le fichier spécifié
-                window.location.href = "https://goldenstm.github.io/Scriptt";
+                this.showMainApp();
             }
 
             showLoginError(message) {
@@ -855,6 +854,11 @@
             window.authSystem = new AuthSystem();
         });
     </script>
+    <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // empêche le rechargement
+      window.location.href = "file:///C:/Users/suatt/Desktop/Stickers%20app/v2.3%20site%20app.html";
+    });
+  </script>
 </body>
 </html>
-
