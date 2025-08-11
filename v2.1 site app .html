@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -764,11 +765,13 @@
                     return;
                 }
 
-                // Connexion réussie
+                // Connexion réussie - Redirection vers le fichier v2.1.2
                 localStorage.setItem('footballStickersCurrentUser', username);
                 this.currentUser = username;
                 errorDiv.classList.add('hidden');
-                this.showMainApp();
+                
+                // Redirection vers le fichier spécifié
+                window.location.href = "file:///C:/Users/suatt/Desktop/Stickers%20app/v2.1.2%20site%20app.html";
             }
 
             showLoginError(message) {
